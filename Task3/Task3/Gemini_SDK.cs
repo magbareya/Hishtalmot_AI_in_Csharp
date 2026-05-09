@@ -6,6 +6,9 @@ namespace AIChat
 {
     public class Gemini_SDK
     {
+        private const int MaxToolSteps = 5;
+        private const int StreamChunkSize = 24;
+
         public static string[] GetModels()
         {
             return ["gemini-2.5-flash", "gemini-2.5-pro", "stub-other-provider-basic"];
@@ -71,9 +74,7 @@ namespace AIChat
                     Parts = [new Part { Text = userMessage }]
                 }
             };
-            const int maxSteps = 5;
-
-            for (var step = 0; step < maxSteps; step++)
+            for (var step = 0; step < MaxToolSteps; step++)
             {
                 var response = await geminiModel.Models.GenerateContentAsync(model: model, contents: history, config: config);
                 var content = response.Candidates?[0].Content;
@@ -121,7 +122,7 @@ namespace AIChat
                     });
                 }
 
-                if (step == maxSteps - 1)
+                if (step == MaxToolSteps - 1)
                 {
                     toolOutput.Parts.Add(new Part
                     {
@@ -142,10 +143,9 @@ namespace AIChat
                 yield break;
             }
 
-            const int chunkSize = 24;
-            for (var i = 0; i < text.Length; i += chunkSize)
+            for (var i = 0; i < text.Length; i += StreamChunkSize)
             {
-                var length = Math.Min(chunkSize, text.Length - i);
+                var length = Math.Min(StreamChunkSize, text.Length - i);
                 yield return text.Substring(i, length);
             }
         }
