@@ -1,0 +1,117 @@
+##############################
+# Build results
+##############################
+[Bb]in/
+[Oo]bj/
+[Ll]og/
+[Ll]ogs/
+
+##############################
+# Visual Studio files
+##############################
+.vs/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+##############################
+# Rider / VS Code (optional)
+##############################
+.idea/
+.vscode/
+
+##############################
+# .NET Core / .NET 8
+##############################
+project.lock.json
+project.fragment.lock.json
+artifacts/
+
+##############################
+# NuGet
+##############################
+*.nupkg
+*.snupkg
+packages/
+!**/packages/build/
+*.nuget.props
+*.nuget.targets
+
+##############################
+# Debug / Release folders
+##############################
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+
+##############################
+# Logs & temp files
+##############################
+*.log
+*.tmp
+*.temp
+*.cache
+
+##############################
+# OS files
+##############################
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+##############################
+# Windows Forms designer
+##############################
+*.resx.user
+
+##############################
+# Publish output
+##############################
+publish/
+*.publishproj
+
+##############################
+# Single-file publish / self-contained
+##############################
+*.exe
+*.dll
+*.pdb
+*.runtimeconfig.json
+*.deps.json
+
+##############################
+# Test results
+##############################
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+##############################
+# Coverage tools
+##############################
+coverage/
+*.coverage
+*.coveragexml
+
+##############################
+# Entity Framework
+##############################
+*.mdf
+*.ldf
+
+##############################
+# Secrets
+##############################
+secrets.json
+appsettings.Development.json
+
+##############################
+# Others
+##############################
+*.bak
+*.swp
+*~
