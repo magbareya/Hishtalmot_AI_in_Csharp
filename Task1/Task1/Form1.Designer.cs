@@ -49,6 +49,7 @@ namespace AIChat
             userMessageTextBox.Name = "userMessageTextBox";
             userMessageTextBox.Size = new Size(649, 23);
             userMessageTextBox.TabIndex = 1;
+            userMessageTextBox.KeyDown += userMessageTextBox_KeyDown;
             // 
             // sendButton
             // 

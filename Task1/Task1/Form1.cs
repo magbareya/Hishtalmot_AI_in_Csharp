@@ -47,6 +47,23 @@ namespace AIChat
         }
 
         /// <summary>
+        /// Course step: pressing Enter in the prompt textbox sends the message.
+        /// </summary>
+        private void userMessageTextBox_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode != Keys.Enter)
+            {
+                return;
+            }
+
+            e.SuppressKeyPress = true;
+            if (sendButton.Enabled)
+            {
+                sendButton.PerformClick();
+            }
+        }
+
+        /// <summary>
         /// Course step: keep the conversation visible in a scrollable chat area.
         /// </summary>
         private void AppendMessage(string role, string message)
