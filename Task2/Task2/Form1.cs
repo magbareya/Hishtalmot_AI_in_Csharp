@@ -1,10 +1,10 @@
-using Lesson_1_2_http;
 using System.Text;
 
 namespace AIChat
 {
     public partial class Form1 : Form
     {
+        private const int MaxMemoryMessages = 20;
         private readonly List<(string Role, string Content)> conversationMemory = new();
         private readonly string[] availableModels;
 
@@ -76,7 +76,7 @@ namespace AIChat
 
         private string BuildPromptFromMemory()
         {
-            return string.Join(Environment.NewLine, conversationMemory.Select(message => $"{message.Role}: {message.Content}"));
+            return string.Join(Environment.NewLine, conversationMemory.TakeLast(MaxMemoryMessages).Select(message => $"{message.Role}: {message.Content}"));
         }
 
         private void clearMemoryButton_Click(object sender, EventArgs e)

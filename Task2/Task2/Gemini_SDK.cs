@@ -1,7 +1,7 @@
 using DotNetEnv;
 using Google.GenAI;
 
-namespace Lesson_1_2_http
+namespace AIChat
 {
     public class Gemini_SDK
     {
@@ -18,8 +18,13 @@ namespace Lesson_1_2_http
                 yield break;
             }
 
-            Env.Load(@"C:\Users\Gilad\source\repos\SK\.env");
             var geminiKey = Environment.GetEnvironmentVariable("GeminiAPIKey");
+            if (string.IsNullOrWhiteSpace(geminiKey))
+            {
+                Env.Load();
+                geminiKey = Environment.GetEnvironmentVariable("GeminiAPIKey");
+            }
+
             var geminiModel = new Client(apiKey: geminiKey);
 
             await foreach (var response in geminiModel.Models.GenerateContentStreamAsync(model: model, contents: userMessage))
