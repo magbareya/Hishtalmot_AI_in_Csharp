@@ -60,24 +60,26 @@ namespace AIChat
         /// Course step: use Gemini_SDK as-is.
         /// Gemini_SDK reads Console input, so we provide the form message through Console.In.
         /// </summary>
-        private static Task<string> GetAiResponseAsync(string userMessage)
+        private static async Task<string> GetAiResponseAsync(string userMessage)
         {
-            return Task.Run(() =>
+            TextReader originalInput;
+            lock (GeminiCallLock)
+            {
+                originalInput = Console.In;
+                Console.SetIn(new StringReader(userMessage + Environment.NewLine));
+            }
+
+            try
+            {
+                return await Gemini_SDK.Call();
+            }
+            finally
             {
                 lock (GeminiCallLock)
                 {
-                    var originalInput = Console.In;
-                    try
-                    {
-                        Console.SetIn(new StringReader(userMessage + Environment.NewLine));
-                        return Gemini_SDK.Call().GetAwaiter().GetResult();
-                    }
-                    finally
-                    {
-                        Console.SetIn(originalInput);
-                    }
+                    Console.SetIn(originalInput);
                 }
-            });
+            }
         }
     }
 }
