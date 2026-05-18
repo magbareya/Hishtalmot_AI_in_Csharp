@@ -18,11 +18,9 @@ This project is a Windows Forms AI chat application. The user can talk with the 
 2. Add one of these keys:
    - `GEMINI_API_KEY=your_key`
    - `GeminiAPIKey=your_key`
-3. Build the project:
-   - `dotnet build FinalProject/FinalProject.slnx`
-4. Run the WinForms project from Visual Studio on Windows.
-5. Choose a model, type a message, and press **Send**.
-6. Ask normal questions, math questions, or unit conversion questions such as:
+3. Run the WinForms project from Visual Studio on Windows.
+4. Choose a model, type a message, and press **Send**.
+5. Ask normal questions, math questions, or unit conversion questions such as:
    - `What is (45*12)/3?`
    - `Convert 10 kilometers to miles`
    - `Convert 72 fahrenheit to celsius`
