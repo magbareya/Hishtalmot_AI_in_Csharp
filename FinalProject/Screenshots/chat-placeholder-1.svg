@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700">
+  <rect width="1200" height="700" fill="#f3f4f6"/>
+  <rect x="80" y="60" width="1040" height="580" rx="18" fill="#ffffff" stroke="#d1d5db"/>
+  <text x="120" y="110" font-family="Segoe UI, Arial, sans-serif" font-size="28" fill="#111827">Final Project AI Chat</text>
+  <text x="120" y="150" font-family="Segoe UI, Arial, sans-serif" font-size="18" fill="#4b5563">Placeholder screenshot - replace with a real app screenshot after running the project.</text>
+  <rect x="120" y="190" width="960" height="320" rx="12" fill="#f9fafb" stroke="#e5e7eb"/>
+  <text x="150" y="240" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2563eb">AI:</text>
+  <text x="200" y="240" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#111827">Hello! Ask me questions, calculations, or unit conversions.</text>
+  <text x="150" y="300" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#059669">You:</text>
+  <text x="220" y="300" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#111827">Convert 10 kilometers to miles</text>
+  <text x="150" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#2563eb">AI:</text>
+  <text x="200" y="360" font-family="Segoe UI, Arial, sans-serif" font-size="22" fill="#111827">10 kilometers = 6.2137 miles</text>
+  <rect x="120" y="550" width="780" height="50" rx="10" fill="#ffffff" stroke="#cbd5e1"/>
+  <text x="145" y="582" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#6b7280">Type your message here...</text>
+  <rect x="930" y="550" width="150" height="50" rx="10" fill="#2563eb"/>
+  <text x="980" y="582" font-family="Segoe UI, Arial, sans-serif" font-size="20" fill="#ffffff">Send</text>
+</svg>
