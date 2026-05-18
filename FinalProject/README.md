@@ -27,6 +27,6 @@ This project is a Windows Forms AI chat application. The user can talk with the 
    - `Convert 10 kilometers to miles`
    - `Convert 72 fahrenheit to celsius`
 
-## Screenshot placeholders
+## Screenshots
 
 ![Screenshot Placeholder 1](Screenshots/Screenshot.png)
