@@ -29,6 +29,4 @@ This project is a Windows Forms AI chat application. The user can talk with the 
 
 ## Screenshot placeholders
 
-![Screenshot Placeholder 1](Screenshots/chat-placeholder-1.svg)
-
-![Screenshot Placeholder 2](Screenshots/chat-placeholder-2.svg)
+![Screenshot Placeholder 1](Screenshots/Screenshot.png)
